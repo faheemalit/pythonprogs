@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 21 19:07:35 2019
+
+@author: faheem
+"""
+# number of elements 
+n = int(input("Enter number of elements : ")) 
+b=[]
+# Below line read inputs from user using map() function 
+a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:n] 
+print("\nList is - ", a) 
+j=n-1
+for i in range(n):
+    ele=a[i]+a[j]
+    j-=1
+    b.append(ele)
+for k in range(n):
+    print(b[k],end=" ")

@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 27 21:36:19 2019
+
+@author: faheem
+"""
+import string
+import random
+symbols=list(string.ascii_letters)
+
+card1=[0]*5
+card2=[0]*5
+position1=[0,1,2,3,4]
+position2=[0,1,2,3,4]
+
+pos1=random.randint(0,4)
+pos2=random.randint(0,4)
+
+samesymbol=random.choice(symbols)
+symbols.remove(samesymbol)
+card1[pos1]=samesymbol
+card2[pos2]=samesymbol
+position1.remove(pos1)
+position2.remove(pos2)
+
+for i in range(4):
+    symbol=random.choice(symbols)
+    symbols.remove(symbol)
+    pos1=random.choice(position1)
+    position1.remove(pos1)
+    card1[pos1]=symbol
+    
+for i in range(4):
+    symbol=random.choice(symbols)
+    symbols.remove(symbol)
+    pos2=random.choice(position2)
+    position2.remove(pos2)
+    card2[pos2]=symbol
+print(card1)
+print(card2)    
+ch=input("Spot the same symbol.: ")
+if(ch==samesymbol):
+    print("Right Answer")
+else:
+    print("Wrong Answer")

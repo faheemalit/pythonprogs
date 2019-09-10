@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 20 11:48:20 2019
+
+@author: faheem
+"""
+
+# Python program showing 
+# Graphical representation of 
+# exp() function 
+signal=list()
+N=input("Enter how many elements you want:")
+print ('Enter numbers in array: ')
+for i in range(int(N)):
+    print("x(",i,"):")
+    ele=input()
+    signal.append(int(ele))
+print ("Signal:",signal)
